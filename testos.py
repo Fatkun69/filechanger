@@ -1,4 +1,6 @@
 import os
+import time
+
 '''reference data : https://steam.oxxostudio.tw/category/python/library/os.html'''
 
 '''test os object'''
@@ -74,9 +76,17 @@ print(os.path.isdir("demo"))
 print(os.path.isfile("demo"))
 
 print(os.path.getctime("demo"))
+'''use time object to change'''
+os.chdir("demo")
+print(os.getcwd())
+after_change_time = os.path.getctime(os.getcwd())
+'''change format to easy read'''
+print(time.strftime("%Y-%m-%d %H:%M:%S",
+                    time.localtime(after_change_time)))
+'''
 print(os.path.getsize("main.py"))
-
 print(os.path.basename(os_path))
+'''
 
 '''os system'''
 '''os.system("del demo")'''
