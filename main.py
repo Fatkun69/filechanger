@@ -55,6 +55,7 @@ while 1:
                 else:
                     '''search file again'''
                     file_target = user_command
+                '''end change user command if'''
             '''end if else'''
 
         '''end while 1'''
